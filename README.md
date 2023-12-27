@@ -40,8 +40,8 @@ Linux环境下基于C++语言实现的轻量级web服务器：
 
 ## Reactor模式
 
-![](.\root\Reactor.jpg)
+<img src=".\root\Reactor.jpg" style="zoom: 100%;" />
 
 ## Proactor模式
 
-![](.\root\Proactor.jpg)
+<img src=".\root\Proactor.jpg" style="zoom: 100%;" />
