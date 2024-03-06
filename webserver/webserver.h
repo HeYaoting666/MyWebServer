@@ -20,22 +20,6 @@ public:
     static const int MAX_EVENT_NUMBER = 10000; //最大事件数
     static const int TIMESLOT = 5;             //最小超时单位
 
-public:
-    WebServer(int port,
-              std::string log_save_path,
-              std::string user,
-              std::string pass_word,
-              std::string data_base_name,
-              int asyn_log_write,
-              int opt_linger,
-              int trig_mode,
-              int sql_num,
-              int thread_num,
-              int close_log,
-              int actor_model);
-
-    ~WebServer();
-
 private:
     //基础
     int m_port;             // 监听端口
@@ -77,6 +61,22 @@ private:
     SortTimerList m_timer_list;
 
 public:
+    WebServer(int port,
+              std::string log_save_path,
+              std::string user,
+              std::string pass_word,
+              std::string data_base_name,
+              int asyn_log_write,
+              int opt_linger,
+              int trig_mode,
+              int sql_num,
+              int thread_num,
+              int close_log,
+              int actor_model);
+
+    ~WebServer();
+
+public:
     void event_listen();
     void event_loop();
 
@@ -89,7 +89,6 @@ private:
 
     //初始化数据库连接池
     void init_sql_pool();
-    void get_mysql_result(SQLConnPool* sql_conn_pool);
 
     //初始化线程池
     void init_thread_pool();

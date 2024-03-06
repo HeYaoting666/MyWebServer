@@ -95,10 +95,6 @@ void WebServer::init_sql_pool() {
                           3306, m_max_sql_num, m_close_log);
 
     // 将数据库中的用户名和密码加载至 m_users_info 中
-   get_mysql_result(m_sql_conn_pool);
-}
-
-void WebServer::get_mysql_result(SQLConnPool* sql_conn_pool) {
     //先从连接池中取一个连接
     MYSQL *mysql = nullptr;
     ConnectionRAII mysql_conn(&mysql, m_sql_conn_pool);
