@@ -33,7 +33,7 @@ private:
 
     int m_actor_model;           //模型切换
 
-    std::list<T*> m_work_queue;  //请求队列
+    std::list<T*> m_work_queue;  //请求队列, 生产者消费者模型
     Locker m_queue_locker;       //保护请求队列的互斥锁
     Sem m_queue_stat;            //是否有任务需要处理
 };
